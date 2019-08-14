@@ -5,10 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamarinPlayground.MainPage">
-
-    <Button x:Name="buttonAdd" Text="Click to Add" />
-    <Button x:Name="buttonClear" Text="Click to Clear" />
-    <StackLayout Padding="10" Spacing="10" Orientation="Vertical" x:Name="layout">
-    </StackLayout>
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10" Orientation="Vertical" x:Name="buttons">
+            <Button x:Name="buttonAdd" Text="Click to Add" />
+            <Button x:Name="buttonClear" Text="Click to Clear" />
+            <StackLayout Padding="10" Spacing="10" Orientation="Vertical" x:Name="layout">
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 </ContentPage>
