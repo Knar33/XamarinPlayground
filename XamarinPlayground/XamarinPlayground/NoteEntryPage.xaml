@@ -4,13 +4,27 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="XamarinPlayground.MainPage">
-    <StackLayout Margin="10,35,10,10">
-        <Label Text="Notes"
-               HorizontalOptions="Center"
-               FontAttributes="Bold" />
-        <Editor x:Name="editor"
-                Placeholder="Enter your note"
+             x:Class="XamarinPlayground.NoteEntryPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="{x:Type Editor}">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+
+        <Style TargetType="Button"
+               ApplyToDerivedTypes="True"
+               CanCascade="True">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="BackgroundColor" Value="LightGray" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="BorderRadius" Value="5" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <StackLayout Margin="20">
+        <Editor Placeholder="Enter your note"
+                Text="{Binding Text}"
                 HeightRequest="100" />
         <Grid>
             <Grid.ColumnDefinitions>
