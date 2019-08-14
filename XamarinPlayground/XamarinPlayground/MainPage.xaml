@@ -6,10 +6,9 @@
              mc:Ignorable="d"
              x:Class="XamarinPlayground.MainPage">
 
+    <Button x:Name="buttonAdd" Text="Click to Add" />
+    <Button x:Name="buttonClear" Text="Click to Clear" />
     <StackLayout Padding="10" Spacing="10" Orientation="Vertical" x:Name="layout">
-        <Label Text="Ender a message below: " />
-        <Button x:Name="buttonSpeak" Text="Click to speak" />
-        <Entry x:Name="entryMessage" />
     </StackLayout>
 
 </ContentPage>

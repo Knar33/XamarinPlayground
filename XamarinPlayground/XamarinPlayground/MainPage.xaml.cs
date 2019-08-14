@@ -15,10 +15,12 @@ namespace XamarinPlayground
         {
             InitializeComponent();
 
-            buttonSpeak.Clicked += ButtonSpeakClicked;
+            buttonAdd.Clicked += ButtonAddClicked;
+
+            buttonClear.Clicked += ButtonClearClicked;
         }
 
-        private void ButtonSpeakClicked(object sender, EventArgs e)
+        private void ButtonAddClicked(object sender, EventArgs e)
         {
             Entry newEntry = new Entry
             {
@@ -28,6 +30,11 @@ namespace XamarinPlayground
             newEntry.SetBinding(Entry.TextProperty, "InputValue");
 
             layout.Children.Add(newEntry);
+        }
+
+        private void ButtonClearClicked(object sender, EventArgs e)
+        {
+            layout.Children.Clear();
         }
     }
 }
