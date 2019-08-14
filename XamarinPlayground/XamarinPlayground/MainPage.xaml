@@ -5,13 +5,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="XamarinPlayground.MainPage">
-    <ScrollView>
-        <StackLayout Padding="10" Spacing="10" Orientation="Vertical" x:Name="buttons">
-            <Button x:Name="buttonAdd" Text="Click to Add" />
-            <Button x:Name="buttonClear" Text="Click to Clear" />
-            <StackLayout Padding="10" Spacing="10" Orientation="Vertical" x:Name="layout">
-            </StackLayout>
-        </StackLayout>
-    </ScrollView>
-
+    <StackLayout Margin="10,35,10,10">
+        <Label Text="Notes"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+        <Editor x:Name="editor"
+                Placeholder="Enter your note"
+                HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Save"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
 </ContentPage>
