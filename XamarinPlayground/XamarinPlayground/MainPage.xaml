@@ -6,11 +6,10 @@
              mc:Ignorable="d"
              x:Class="XamarinPlayground.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="10" Spacing="10" Orientation="Vertical">
+        <Label Text="Ender a message below: " />
+        <Button x:Name="buttonSpeak" />
+        <Entry x:Name="entryMessage" />
     </StackLayout>
 
 </ContentPage>

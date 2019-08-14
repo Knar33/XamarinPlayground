@@ -16,6 +16,13 @@ namespace XamarinPlayground
         public MainPage()
         {
             InitializeComponent();
+
+            buttonSpeak.Clicked += ButtonSpeakClicked;
+        }
+
+        private void ButtonSpeakClicked(object sender, EventArgs e)
+        {
+            entryMessage.Text = "Button has been clicked";
         }
     }
 }
