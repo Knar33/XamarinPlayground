@@ -20,7 +20,14 @@ namespace XamarinPlayground
 
         private void ButtonSpeakClicked(object sender, EventArgs e)
         {
-            entryMessage.Text = "Button has been clicked";
+            Entry newEntry = new Entry
+            {
+                Placeholder = "Enter input here",
+                HorizontalOptions = LayoutOptions.FillAndExpand
+            };
+            newEntry.SetBinding(Entry.TextProperty, "InputValue");
+
+            layout.Children.Add(newEntry);
         }
     }
 }
